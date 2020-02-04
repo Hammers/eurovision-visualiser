@@ -18,5 +18,8 @@ io.on("connection", socket => {
     console.log("User connected");
     setInterval(() => {
         socket.broadcast.emit("newdata", getRandomValue())
-    }, 5000)
+    }, 5000);
+    socket.on('sendMessage', function(msg){
+        console.log('message: ' + msg);
+    });
 });

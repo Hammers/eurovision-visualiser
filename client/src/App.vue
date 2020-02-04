@@ -1,6 +1,12 @@
 <template>
-  <div class="small">
-    {{value}}
+  <div class="container ">
+    <div class="jumbotron justify-content-center">
+      <h1 class="display-1 text-center">Eurovisualiser</h1>
+      <div class="d-flex justify-content-around">
+      <button class="btn btn-primary btn-lg">View</button>
+      <button class="btn btn-warning btn-lg" @click="testEmit">Input</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,6 +30,9 @@
           this.value = fetchedData;
         })
       },
+      testEmit() {
+        socket.emit("sendMessage",'I sent this message');
+      }
     }
   };
 </script>
