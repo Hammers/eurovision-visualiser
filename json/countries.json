@@ -1,0 +1,50 @@
+[
+  {
+    "id" : "uk",
+    "name": "United Kingdom"
+  },
+  {
+    "id": "ab",
+    "name": "Albania"
+  },
+  {
+    "id": "sw",
+    "name": "Sweden"
+  },
+  {
+    "id": "no",
+    "name": "Norway"
+  },
+  {
+    "id": "fi",
+    "name": "Finland"
+  },
+  {
+    "id": "fr",
+    "name": "France"
+  },
+  {
+    "id": "li",
+    "name": "Lithuania"
+  },
+  {
+    "id": "es",
+    "name": "Estonia"
+  },
+  {
+    "id": "ge",
+    "name": "Germany"
+  },
+  {
+    "id": "it",
+    "name": "Italy"
+  },
+  {
+    "id": "ne",
+    "name": "Netherlands"
+  },
+  {
+    "id": "sp",
+    "name": "Spain"
+  }
+]
