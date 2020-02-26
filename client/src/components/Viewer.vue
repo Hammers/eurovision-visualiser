@@ -1,10 +1,10 @@
 <template>
         <div class="container-fluid d-flex align-items-center justify-content-center">
-            <div class="row justify-content-center align-items-center w-75">
+            <div class="row justify-content-center align-items-center w-100">
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
-                            <img src="../../public/uk.webp" alt="" class="flag mx-3 my-1" v-if="!isSelected(country)">
+                            <img src="../../public/uk.webp" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
                             <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="isSelected(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
@@ -18,7 +18,7 @@
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
-                            <img src="../../public/uk.webp" alt="" class="flag mx-3 my-1" v-if="!isSelected(country)">
+                            <img src="../../public/uk.webp" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
                             <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="isSelected(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
@@ -115,6 +115,7 @@
         font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
+        font-size: 1.9rem;
     }
 
     .unselected {
@@ -127,9 +128,9 @@
     }
 
     .number-box {
-        height: 38px;
-        width: 75px;
-        font-size: 1.5rem;
+        height: 60px;
+        width: 116px;
+        font-size: 2.8rem;
     }
     
     .other {
@@ -149,6 +150,6 @@
     }
     
     .flag {
-        height: 30px;
+        height: 45px;
     }
 </style>

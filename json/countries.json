@@ -46,5 +46,61 @@
   {
     "id": "sp",
     "name": "Spain"
+  },
+  {
+    "id": "ic",
+    "name": "Iceland"
+  },
+  {
+    "id": "oz",
+    "name": "Australia"
+  },
+  {
+    "id": "ru",
+    "name": "Russia"
+  },
+  {
+    "id": "sz",
+    "name": "Switzerland"
+  },
+  {
+    "id": "cy",
+    "name": "Cyprus"
+  },
+  {
+    "id": "gr",
+    "name": "Greece"
+  },
+  {
+    "id": "br",
+    "name": "Belarus"
+  },
+  {
+    "id": "az",
+    "name": "Azerbaijan"
+  },
+  {
+    "id": "cz",
+    "name": "Czech Republic"
+  },
+  {
+    "id": "se",
+    "name": "Serbia"
+  },
+  {
+    "id": "sm",
+    "name": "San Marino"
+  },
+  {
+    "id": "de",
+    "name": "Denmark"
+  },
+  {
+    "id": "ma",
+    "name": "Malta"
+  },
+  {
+    "id": "mc",
+    "name": "North Macedonia"
   }
 ]
