@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex h-100 align-items-center justify-content-center">
+  <div class="d-flex align-items-center justify-content-center">
     <!--
     <div class="justify-content-center h-50" v-if="!component">
       <img src="../public/ESC2020_Rotterdam_white.png" alt="" class="h-75">
@@ -15,7 +15,7 @@
 
 <script>
   import io from "socket.io-client";
-  var socket = io.connect("http://localhost:3000");
+  var socket = io.connect("https://eurovisualiser.herokuapp.com/");
 
   export default {
     data() {

@@ -1,7 +1,7 @@
 <template>
-    <div class="card w-75">
+    <div class="my-3">
         <div class="card-body row justify-content-center">
-            <button class="btn btn-lg btn-primary m-1 col-6 col-sm-4 col-md-3 col-lg-2" @click="onClick(country.id)" v-for="(country,index) in this.sortedCountries" :key="index" :disabled="current.find(x => x.id === country.id) || current.length === 10">{{country.name}}</button>
+            <button class="btn btn-lg btn-primary m-1 col-5 col-sm-4 col-md-3 col-lg-2" @click="onClick(country.id)" v-for="(country,index) in this.sortedCountries" :key="index" :disabled="current.find(x => x.id === country.id) || current.length === 10">{{country.name}}</button>
         </div>
         <div class="d-flex justify-content-center">
             <button class="btn btn-danger btn-lg m-2" @click="undo" v-if="current.length > 0">Undo</button>

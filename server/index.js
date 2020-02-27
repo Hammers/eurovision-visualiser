@@ -1,6 +1,6 @@
 const   express = require("express"),
         app = express(),
-        port = 3000,
+        port = process.env.PORT || 3000,
         mongoose = require("mongoose");
 
 const fs = require('fs');
@@ -20,6 +20,15 @@ for (var i = 0; i < countries.length; i++) {
 }
 
 let current = [];
+
+// Handle production
+if (process.env.NODE_ENV === 'production') {
+    // Static folder
+    app.use(express.static(__dirname + '/public/'));
+
+    // Handle SPA
+    app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+}
 
 const server = app.listen(`${port}`, function() {
     console.log(`Server started on port ${port}`);
