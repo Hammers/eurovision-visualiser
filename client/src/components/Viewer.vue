@@ -4,7 +4,7 @@
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
-                            <img src="../../public/uk.webp" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
                             <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="isSelected(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
@@ -18,7 +18,7 @@
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
-                            <img src="../../public/uk.webp" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
                             <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="isSelected(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
@@ -48,7 +48,7 @@
                 let list = [];
                 for(var i = 0; i < countries.length; i++)
                 {
-                    list.push({id: countries[i].id, name: countries[i].name, value: this.totals[countries[i].id]});
+                    list.push({id: countries[i].id, name: countries[i].name, value: this.totals[countries[i].id], flag: countries[i].flag});
                 }
                 list = list.sort((a,b) => {return b.value - a.value});
                 let firstHalf = list.splice(0,list.length / 2);
@@ -115,7 +115,8 @@
         font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
-        font-size: 1.9rem;
+        font-size: 4vh;
+        height: 7vh;
     }
 
     .unselected {
@@ -128,9 +129,9 @@
     }
 
     .number-box {
-        height: 60px;
-        width: 116px;
-        font-size: 2.8rem;
+        height: 7vh;
+        width: 15vh;
+        font-size: 7vh;
     }
     
     .other {
@@ -150,6 +151,7 @@
     }
     
     .flag {
-        height: 45px;
+        height: 5.5vh;
+        width: 10vh;
     }
 </style>
