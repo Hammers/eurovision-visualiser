@@ -26,86 +26,107 @@
   },
   {
     "id": "fr",
-    "name": "France"
+    "name": "France",
+    "flag": "france.png"
   },
   {
     "id": "li",
-    "name": "Lithuania"
+    "name": "Lithuania",
+    "flag": "lithuania.png"
   },
   {
     "id": "es",
-    "name": "Estonia"
+    "name": "Estonia",
+    "flag": "estonia.png"
   },
   {
     "id": "ge",
-    "name": "Germany"
+    "name": "Germany",
+    "flag": "germany.png"
   },
   {
     "id": "it",
-    "name": "Italy"
+    "name": "Italy",
+    "flag": "italy.png"
   },
   {
     "id": "ne",
-    "name": "Netherlands"
+    "name": "Netherlands",
+    "flag": "netherlands.png"
   },
   {
     "id": "sp",
-    "name": "Spain"
+    "name": "Spain",
+    "flag": "spain.png"
   },
   {
     "id": "ic",
-    "name": "Iceland"
+    "name": "Iceland",
+    "flag": "iceland.png"
   },
   {
     "id": "oz",
-    "name": "Australia"
+    "name": "Australia",
+    "flag": "australia.png"
   },
   {
     "id": "ru",
-    "name": "Russia"
+    "name": "Russia",
+    "flag": "russia.png"
   },
   {
     "id": "sz",
-    "name": "Switzerland"
+    "name": "Switzerland",
+    "flag": "switzerland.png"
   },
   {
     "id": "cy",
-    "name": "Cyprus"
+    "name": "Cyprus",
+    "flag": "cyprus.png"
   },
   {
     "id": "gr",
-    "name": "Greece"
+    "name": "Greece",
+    "flag": "greece.png"
   },
   {
     "id": "br",
-    "name": "Belarus"
+    "name": "Belarus",
+    "flag": "belarus.png"
   },
   {
     "id": "az",
-    "name": "Azerbaijan"
+    "name": "Azerbaijan",
+    "flag": "azerbaijan.png"
   },
   {
     "id": "cz",
-    "name": "Czech Republic"
+    "name": "Czech Republic",
+    "flag": "czech.png"
   },
   {
     "id": "se",
-    "name": "Serbia"
+    "name": "Serbia",
+    "flag": "serbia.png"
   },
   {
     "id": "sm",
-    "name": "San Marino"
+    "name": "San Marino",
+    "flag": "sanmarino.png"
   },
   {
     "id": "de",
-    "name": "Denmark"
+    "name": "Denmark",
+    "flag": "denmark.png"
   },
   {
     "id": "ma",
-    "name": "Malta"
+    "name": "Malta",
+    "flag": "malta"
   },
   {
     "id": "mc",
-    "name": "North Macedonia"
+    "name": "North Macedonia",
+    "flag": "macedonia.png"
   }
 ]

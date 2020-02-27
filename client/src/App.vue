@@ -15,7 +15,7 @@
 
 <script>
   import io from "socket.io-client";
-  var socket = io.connect("https://eurovisualiser.herokuapp.com/");
+  var socket = io.connect();
 
   export default {
     data() {
