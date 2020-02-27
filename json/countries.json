@@ -1,23 +1,28 @@
 [
   {
     "id" : "uk",
-    "name": "United Kingdom"
+    "name": "United Kingdom",
+    "flag": "uk.webp"
   },
   {
     "id": "ab",
-    "name": "Albania"
+    "name": "Albania",
+    "flag": "albania.png"
   },
   {
     "id": "sw",
-    "name": "Sweden"
+    "name": "Sweden",
+    "flag": "sweden.png"
   },
   {
     "id": "no",
-    "name": "Norway"
+    "name": "Norway",
+    "flag": "norway.png"
   },
   {
     "id": "fi",
-    "name": "Finland"
+    "name": "Finland",
+    "flag": "finland.png"
   },
   {
     "id": "fr",
