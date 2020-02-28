@@ -9,7 +9,7 @@
       </div>
     </div>
     -->
-    <router-view v-bind="currentProperties" @add-one="addOne" @next="next" @undo="undo"></router-view>
+    <router-view v-bind="currentProperties" @add-one="addOne" @next="next" @undo="undo" @reset="reset"></router-view>
   </div>
 </template>
 
@@ -49,6 +49,9 @@
       },
       undo() {
         socket.emit("undo")
+      },
+      reset() {
+        socket.emit("reset")
       }
     }
   };
