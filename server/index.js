@@ -55,6 +55,12 @@ io.on("connection", socket => {
         totals[country[0].id] -= value;
         sendData();
     });
+    socket.on('reset',() => {
+        for (var i = 0; i < countries.length; i++) {
+            totals[countries[i].id] = 0;
+        }
+        sendData();
+    });
 });
 
 function sendData(){
