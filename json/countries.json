@@ -1,132 +1,210 @@
 [
   {
-    "id" : "uk",
-    "name": "United Kingdom",
-    "flag": "uk.webp"
+    "id": "is",
+    "name": "Israel",
+    "artist": "Eden Alene",
+    "song": "Feker Libi",
+    "flag": "israel.png",
+    "number": 1
   },
   {
     "id": "ab",
     "name": "Albania",
-    "flag": "albania.png"
-  },
-  {
-    "id": "sw",
-    "name": "Sweden",
-    "flag": "sweden.png"
-  },
-  {
-    "id": "no",
-    "name": "Norway",
-    "flag": "norway.png"
-  },
-  {
-    "id": "fi",
-    "name": "Finland",
-    "flag": "finland.png"
-  },
-  {
-    "id": "fr",
-    "name": "France",
-    "flag": "france.png"
-  },
-  {
-    "id": "li",
-    "name": "Lithuania",
-    "flag": "lithuania.png"
-  },
-  {
-    "id": "es",
-    "name": "Estonia",
-    "flag": "estonia.png"
-  },
-  {
-    "id": "ge",
-    "name": "Germany",
-    "flag": "germany.png"
-  },
-  {
-    "id": "it",
-    "name": "Italy",
-    "flag": "italy.png"
-  },
-  {
-    "id": "ne",
-    "name": "Netherlands",
-    "flag": "netherlands.png"
-  },
-  {
-    "id": "sp",
-    "name": "Spain",
-    "flag": "spain.png"
-  },
-  {
-    "id": "ic",
-    "name": "Iceland",
-    "flag": "iceland.png"
-  },
-  {
-    "id": "oz",
-    "name": "Australia",
-    "flag": "australia.png"
-  },
-  {
-    "id": "ru",
-    "name": "Russia",
-    "flag": "russia.png"
-  },
-  {
-    "id": "sz",
-    "name": "Switzerland",
-    "flag": "switzerland.png"
-  },
-  {
-    "id": "cy",
-    "name": "Cyprus",
-    "flag": "cyprus.png"
+    "artist": "Arelina Ara",
+    "song": "Shaj",
+    "flag": "albania.png",
+    "number": 2
   },
   {
     "id": "gr",
     "name": "Greece",
-    "flag": "greece.png"
+    "artist": "Stefania",
+    "song": "SUPERG!RL",
+    "flag": "greece.png",
+    "number": 3
   },
   {
-    "id": "br",
-    "name": "Belarus",
-    "flag": "belarus.png"
-  },
-  {
-    "id": "az",
-    "name": "Azerbaijan",
-    "flag": "azerbaijan.png"
-  },
-  {
-    "id": "cz",
-    "name": "Czech Republic",
-    "flag": "czech.png"
-  },
-  {
-    "id": "se",
-    "name": "Serbia",
-    "flag": "serbia.png"
-  },
-  {
-    "id": "sm",
-    "name": "San Marino",
-    "flag": "sanmarino.png"
-  },
-  {
-    "id": "de",
-    "name": "Denmark",
-    "flag": "denmark.png"
+    "id": "sz",
+    "name": "Switzerland",
+    "artist": "Gjon's Tears",
+    "song": "Respondez-Moi",
+    "flag": "switzerland.png",
+    "number": 4
   },
   {
     "id": "ma",
     "name": "Malta",
-    "flag": "malta.png"
+    "artist": "Destiny",
+    "song": "All Of My Love",
+    "flag": "malta.png",
+    "number": 5
   },
   {
-    "id": "mc",
-    "name": "North Macedonia",
-    "flag": "macedonia.png"
+    "id": "ru",
+    "name": "Russia",
+    "artist": "Little Big",
+    "song": "Uno",
+    "flag": "russia.png",
+    "number": 6
+  },
+  {
+    "id": "as",
+    "name": "Austria",
+    "artist": "Vincent Bueno",
+    "song": "Alive",
+    "flag": "austria.png",
+    "number": 7
+  },
+  {
+    "id": "bu",
+    "name": "Bulgaria",
+    "artist": "Victoria",
+    "song": "Tears Getting Sober",
+    "flag": "bulgaria.png",
+    "number": 8
+  },
+  {
+    "id" : "uk",
+    "name": "United Kingdom",
+    "artist": "James Newman",
+    "song": "My Last Breath",
+    "flag": "uk.webp",
+    "number": 9
+  },
+  {
+    "id": "oz",
+    "name": "Australia",
+    "artist": "Montaigne",
+    "song": "Don't Break Me",
+    "flag": "australia.png",
+    "number": 10
+  },
+  {
+    "id": "az",
+    "name": "Azerbaijan",
+    "artist": "Efendi",
+    "song": "Cleopatra",
+    "flag": "azerbaijan.png",
+    "number": 11
+  },
+  {
+    "id": "no",
+    "name": "Norway",
+    "artist": "Ulrikke",
+    "song": "Attention",
+    "flag": "norway.png",
+    "number": 12
+  },
+  {
+    "id": "ur",
+    "name": "Ukraine",
+    "artist": "Go_A",
+    "song": "Solovey",
+    "flag": "ukraine.png",
+    "number": 13
+  },
+  {
+    "id": "sm",
+    "name": "San Marino",
+    "artist": "Senhit",
+    "song": "Freaky!",
+    "flag": "sanmarino.png",
+    "number": 14
+  },
+  {
+    "id": "sw",
+    "name": "Sweden",
+    "artist": "The Mamas",
+    "song": "Move",
+    "flag": "sweden.png",
+    "number": 15
+  },
+  {
+    "id": "fi",
+    "name": "Finland",
+    "artist": "Aksel",
+    "song": "Looking Back",
+    "flag": "finland.png",
+    "number": 16
+  },
+  {
+    "id": "ic",
+    "name": "Iceland",
+    "artist": "Dadi & Gagnamid",
+    "song": "Think About Things",
+    "flag": "iceland.png",
+    "number": 17
+  },
+  {
+    "id": "sp",
+    "name": "Spain",
+    "artist": "",
+    "song": "Universo",
+    "flag": "spain.png",
+    "number": 18
+  },
+  {
+    "id": "ro",
+    "name": "Romania",
+    "artist": "Roxen",
+    "song": "Alcohol You",
+    "flag": "belarus.png",
+    "number": 19
+  },
+  {
+    "id": "de",
+    "name": "Denmark",
+    "artist": "Ben & Tan",
+    "song": "Yes",
+    "flag": "denmark.png",
+    "number": 20
+  },
+  {
+    "id": "fr",
+    "name": "France",
+    "artist": "Tom Leeb",
+    "song": "Mon Aliee (The Best In Me)",
+    "flag": "france.png",
+    "number": 21
+  },
+  {
+    "id": "ge",
+    "name": "Germany",
+    "artist": "Ben Dolic",
+    "song": "Violent Thing",
+    "flag": "germany.png",
+    "number": 22
+  },
+  {
+    "id": "ne",
+    "name": "Netherlands",
+    "artist": "Jeangu ",
+    "song": "Grow",
+    "flag": "netherlands.png",
+    "number": 23
+  },
+  {
+    "id": "li",
+    "name": "Lithuania",
+    "artist": "The Roop",
+    "song": "On Fire",
+    "flag": "lithuania.png",
+    "number": 24
+  },
+  {
+    "id": "se",
+    "name": "Serbia",
+    "artist": "Hurricane",
+    "song": "Hasta La Vista",
+    "flag": "serbia.png",
+    "number": 25
+  },
+  {
+    "id": "it",
+    "name": "Italy",
+    "artist": "Diodato",
+    "song": "Fai Rumore",
+    "flag": "italy.png",
+    "number": 26
   }
 ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-items-center justify-content-center">
+  <div class="text-center">
     <!--
     <div class="justify-content-center h-50" v-if="!component">
       <img src="../public/ESC2020_Rotterdam_white.png" alt="" class="h-75">
@@ -9,20 +9,25 @@
       </div>
     </div>
     -->
-    <router-view v-bind="currentProperties" @add-one="addOne" @next="next" @undo="undo" @reset="reset"></router-view>
+    <router-view v-bind="currentProperties" @submit-votes="submit" @next="next" @reset="reset" @bottom-seven="bottomSeven" @top="top" @audience="audience" @toggle-voting="toggleVoting" @toggle-results="toggleResults"></router-view>
   </div>
 </template>
 
 <script>
   import io from "socket.io-client";
-  var socket = io.connect();
+  var socket;
 
   export default {
     data() {
       return {
         totals: {},
+        votes: {},
         current: [],
-        component: null
+        component: null,
+        votingEnabled: false,
+        resultsEnabled: false,
+        audienceMode: false,
+        nextAudienceVote: null,
       };
     },
     created() {
@@ -30,28 +35,64 @@
     },
     computed: {
       currentProperties: function() {
-          return { totals: this.totals, current: this.current }
+        if(this.$route.path === '/admin') {
+          return { votes: this.votes, votingEnabled: this.votingEnabled, resultsEnabled: this.resultsEnabled, nextAudienceVote: this.nextAudienceVote }
+        } else {
+          return { totals: this.totals, current: this.current, audienceMode: this.audienceMode, votingEnabled: this.votingEnabled, resultsEnabled: this.resultsEnabled }
+        }
       }
     },
     methods: {
       getRealtimeData() {
+        console.log(this.$route);
+        if(this.$route.path === '/admin') {
+          socket = io.connect("http://localhost:3000/admin")
+        }
+        else {
+          socket = io.connect("http://localhost:3000")
+        }
         socket.on("newdata", fetchedData => {
           console.log("data received");
+          console.log(fetchedData);
           this.totals = fetchedData.totals;
           this.current = fetchedData.current;
+          this.audienceMode = fetchedData.audienceMode;
+          this.votingEnabled = fetchedData.votingEnabled;
+          this.resultsEnabled = fetchedData.resultsEnabled;
+        });
+        socket.on("admindata", fetchedData => {
+          console.log("data received");
+          console.log(fetchedData);
+          this.votes = fetchedData.votes;
+          this.votingEnabled = fetchedData.votingEnabled;
+          this.resultsEnabled = fetchedData.resultsEnabled;
+          this.nextAudienceVote = fetchedData.nextAudienceVote;
         })
       },
-      addOne(countryId) {
-        socket.emit("sendMessage",{id:countryId})
+      submit(votes) {
+        votes.selected.reverse();
+        socket.emit("submitVotes",votes)
+      },
+      bottomSeven(name) {
+        socket.emit("bottomSeven",{name})
+      },
+      top(name) {
+        socket.emit("top",{name})
       },
       next() {
         socket.emit("next")
       },
-      undo() {
-        socket.emit("undo")
-      },
       reset() {
         socket.emit("reset")
+      },
+      audience() {
+        socket.emit("audience")
+      },
+      toggleVoting() {
+        socket.emit("toggleVoting")
+      },
+      toggleResults() {
+        socket.emit("toggleResults")
       }
     }
   };
@@ -67,6 +108,15 @@
     height: 100%;
     background-image: url(../public/wil-stewart-RpDA3uYkJWM-unsplash.jpg);
     font-family: 'Montserrat';
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
   }
   
 </style>

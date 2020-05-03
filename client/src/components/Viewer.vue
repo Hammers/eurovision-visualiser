@@ -4,8 +4,8 @@
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
-                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
-                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="isSelected(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
+                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
                             <div class="flex-grow-1">
@@ -18,8 +18,8 @@
                 <div class="col-10 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
-                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!isSelected(country)">
-                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="isSelected(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
+                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
                             <div class="flex-grow-1">
@@ -37,7 +37,7 @@
     import countries from '../../../json/countries'
     export default { 
         name: "",
-        props: ["totals","current"],
+        props: ["totals","current","audienceMode"],
         data() {
             return {
                 countries
@@ -57,7 +57,14 @@
         },
         methods: {
             isSelected(country) {
+                
                 return this.current.find(x => x.id === country.id);
+            },
+            showNumberBox(country) {
+                if(this.audienceMode && this.current.length > 0) {
+                    return this.current[0].id === country.id;
+                }
+                else return this.isSelected(country);
             },
             getValue(country) {
                 let points = this.current.find(x => x.id === country.id);

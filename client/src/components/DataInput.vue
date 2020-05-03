@@ -1,17 +1,28 @@
 <template>
     <div class="my-3">
-        <div class="card-body row justify-content-center">
-            <button class="btn btn-lg btn-primary m-1 col-5 col-sm-4 col-md-3 col-lg-2" @click="onClick(country.id)" v-for="(country,index) in this.sortedCountries" :key="index" :disabled="current.find(x => x.id === country.id) || current.length === 10">{{country.name}}</button>
-        </div>
-        <div class="d-flex justify-content-center">
-            <button class="btn btn-danger btn-lg m-2" @click="resetConfirm = true">Reset</button>
-            <button class="btn btn-warning btn-lg m-2" @click="undo" v-if="current.length > 0">Undo</button>
-            <button class="btn btn-success btn-lg m-2" @click="next" v-if="current.length === 10">Next</button>
-        </div>
-        <div class="d-flex justify-content-center" v-if="resetConfirm">
-            <button class="btn btn-danger btn-lg m-2" @click="reset">Yes</button>
-            <button class="btn btn-success btn-lg m-2" @click="resetConfirm = false">No</button>
-        </div>
+        <div class="card row justify-content-center">
+            <div v-for="(vote,index) in votes" :key="index">
+                {{vote.name}} 
+                <button class="btn btn-primary" :disabled="vote.indexDisplayed >= 1" @click="bottomSeven(vote.name)">1 - 7</button>
+                <button class="btn btn-primary" :disabled="vote.indexDisplayed >= 7" @click="top(vote.name)">8</button>
+                <button class="btn btn-primary" :disabled="vote.indexDisplayed >= 8" @click="top(vote.name)">10</button>
+                <button class="btn btn-primary" :disabled="vote.indexDisplayed >= 9" @click="top(vote.name)">12</button>
+            </div>
+            <div class="m-4">
+                <button class="btn btn-primary m-2" @click="next()">Clear Highlighted</button>
+                <button class="btn btn-danger m-2" @click="audience()">Next Audience</button>
+            </div>
+            <div>
+                <button class="btn btn-primary m-2" @click="toggleVoting()">Enable Voting</button>
+                <button class="btn btn-primary m-2" @click="toggleResults()">Enable Results</button>
+            </div>
+            <div>
+                <button class="btn btn-small btn-danger m-2" @click="reset()">Reset</button>
+            </div>
+            <div v-if="nextAudienceVote">
+                Next Audience Score: {{nextAudienceVote.id}} - {{nextAudienceVote.score}}
+            </div>
+        </div>  
     </div>
 </template>
 
@@ -19,7 +30,7 @@
     import countries from '../../../json/countries'
     export default {
         name: "",
-        props: ["current"],
+        props: ["votes","votingEnabled","resultsEnabled","nextAudienceVote"],
         data() {
             return {
                 countries,
@@ -33,18 +44,27 @@
             }
         },
         methods: {
-            onClick(countryId) {
-                this.$emit('add-one',countryId);
+            bottomSeven(name) {
+                this.$emit('bottom-seven',name);
+            },
+            top(name) {
+                this.$emit('top',name);
             },
             next() {
                 this.$emit('next');
             },
-            undo() {
-                this.$emit('undo');
-            },
             reset() {
                 this.resetConfirm = false;
                 this.$emit('reset');
+            },
+            audience() {
+                this.$emit('audience');
+            },
+            toggleVoting() {
+                this.$emit('toggle-voting');
+            },
+            toggleResults() {
+                this.$emit('toggle-results');
             }
         }
     }
