@@ -1,7 +1,7 @@
 <template>
         <div class="container-fluid d-flex align-items-center justify-content-center">
             <div class="row justify-content-center align-items-center w-100">
-                <div class="col-10 col-lg-5 my-0 mx-1 p-0">
+                <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
                             <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
@@ -11,11 +11,11 @@
                             <div class="flex-grow-1">
                                 {{country.name}}
                             </div>
-                            <div class=" mr-2">{{country.value}}</div>
+                            <div class=" mr-3">{{country.value}}</div>
                         </div>
                     </transition-group>
                 </div>
-                <div class="col-10 col-lg-5 my-0 mx-1 p-0">
+                <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
                             <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
@@ -25,11 +25,20 @@
                             <div class="flex-grow-1">
                                 {{country.name}}
                             </div>
-                            <div class=" mr-2">{{country.value}}</div>
+                            <div class=" mr-3">{{country.value}}</div>
                         </div>
                     </transition-group>
                 </div>
+                <div class="col-2 d-flex justify-content-center text-light vote-text align-items-center">
+                    <span class="vote-text-number mx-2">{{votesDisplayed}}</span> OF <span class="vote-text-number mx-2">{{totalVotes}}</span> COUNTRIES VOTING
+                </div>
+                <div class="col-7">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" :style="{width: votePercent + '%'}" :aria-valuenow="votePercent" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                </div>
             </div>
+            
         </div>
 </template>
 
@@ -37,7 +46,7 @@
     import countries from '../../../json/countries'
     export default { 
         name: "",
-        props: ["totals","current","audienceMode"],
+        props: ["totals","current","audienceMode","totalVotes","votesDisplayed"],
         data() {
             return {
                 countries
@@ -54,6 +63,9 @@
                 let firstHalf = list.splice(0,list.length / 2);
                 return {firstHalf,secondHalf: list}
             },
+            votePercent() {
+                return (this.votesDisplayed / this.totalVotes) * 100;
+            }
         },
         methods: {
             isSelected(country) {
@@ -122,7 +134,7 @@
         font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
-        font-size: 4vh;
+        font-size: 3.5vh;
         height: 7vh;
     }
 
@@ -160,5 +172,21 @@
     .flag {
         height: 5.5vh;
         width: 10vh;
+    }
+    
+    .vote-text {
+        font-size: 0.9rem;
+    }
+
+    .vote-text-number {
+        font-size: 1.2rem;
+    }
+    
+    .progress {
+        background-color: rgb(21, 34, 109);
+    }
+    
+    .progress-bar {
+        background-color: rgb(110, 196, 240);
     }
 </style>

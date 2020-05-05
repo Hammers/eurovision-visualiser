@@ -1,5 +1,5 @@
 <template>
-    <div class="home-body">
+    <div class="home-body text-center">
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <main role="main" class="inner cover" >
             <img src="VirtualEurovisionLogo.png" alt="" class="w-100">

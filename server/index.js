@@ -71,6 +71,7 @@ const server = app.listen(`${port}`, function() {
 
 const io = require("socket.io")(server);
 const admin = io.of('/admin');
+var nextVoteId = 0;
 
 io.on("connection", socket => {
     console.log("User connected");
@@ -78,6 +79,8 @@ io.on("connection", socket => {
     
     
     socket.on('submitVotes',function(data){
+        data.id = Number(nextVoteId);
+        nextVoteId++;
         console.log(data);
         votes.push(data);
         sendData();
@@ -111,7 +114,7 @@ admin.on('connection', socket => {
     });
     socket.on('bottomSeven', function(data){
         current = [];
-        let currentVotes = votes.find(x => x.name === data.name);
+        let currentVotes = votes.find(x => x.id === Number(data.id));
         for (var i = 0; i < 7; i++) {
             let value = points[current.length];
             current.unshift({id: currentVotes.selected[i], value});
@@ -122,7 +125,7 @@ admin.on('connection', socket => {
         sendData();
     });
     socket.on('top', function(data){
-        let currentVotes = votes.find(x => x.name === data.name);
+        let currentVotes = votes.find(x => x.id === Number(data.id));
         let value = points[current.length];
         currentVotes.indexDisplayed++;
         current.unshift({id: currentVotes.selected[currentVotes.indexDisplayed], value});
@@ -136,7 +139,7 @@ admin.on('connection', socket => {
             for (var juryVote in totals) {
                 audienceVotes.push([juryVote, totals[juryVote]]);
             }
-
+            audienceVotes.reverse();
             audienceVotes.sort(function(a, b) {
                 return a[1] - b[1];
             });
@@ -151,7 +154,7 @@ admin.on('connection', socket => {
             totals[audienceVotes[nextAudienceIndex][0]] += audienceVotes[nextAudienceIndex][1];
             nextAudienceIndex++;
         }
-        if(audienceVotes.length > 0) {
+        if(nextAudienceIndex < audienceVotes.length) {
             nextAudienceVote = {id:audienceVotes[nextAudienceIndex][0],score:audienceVotes[nextAudienceIndex][1]};
         }
         sendData();
@@ -169,6 +172,8 @@ admin.on('connection', socket => {
 });
 
 function sendData(){
-    io.emit("newdata", {totals,current,audienceMode: audienceVotes.length > 0,votingEnabled,resultsEnabled});
+    let votesDisplayed = votes.filter(x => x.indexDisplayed > 0).length;
+    let totalVotes = votes.length;
+    io.emit("newdata", {totals,current,audienceMode: audienceVotes.length > 0,votingEnabled,resultsEnabled,votesDisplayed,totalVotes});
     admin.emit("admindata",{votes,votingEnabled,resultsEnabled,nextAudienceVote})
 }

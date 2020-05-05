@@ -8,9 +8,15 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        path: '/reset', component: Home, beforeEnter: (to,from,next) => {
+            delete localStorage.vote2020;
+            next({path: "/"});
+        }
+    },
     { path: '/vote', component: Voting, beforeEnter: (to,from,next) => {
             if (localStorage.vote2020) {
-                next({name: "/"});
+                next({path: "/"});
             } else {
                  next();
             }

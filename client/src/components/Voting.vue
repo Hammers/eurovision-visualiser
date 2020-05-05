@@ -1,25 +1,32 @@
 <template>
-    <div class="container-fluid d-flex align-items-center justify-content-center">
+    <div class="container d-flex align-items-center justify-content-center mt-5 text-light">
         <div class="row justify-content-center align-items-center w-100">
-            <div class="card col-10 col-lg-6 form-inline">
-                <div class="form-group">
+            <div class="col-12 col-lg-8 form-inline w-100 justify-content-center">
+                <div class="d-flex form-group justify-content-center">
                     <label for="nameInput" class="m-3">Your Name</label>
-                    <input type="text" class="form-control" id="nameInput" placeholder="Jon Ola Sand" v-model="votes.name">
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter name..." v-model="votes.name">
+                    <span class="small-text w-25 m-3"> Ryan will use this to work out who's votes are who's so please make sure this is something recognisable! (It's not stored anywhere and only Ryan will see it)</span>
                 </div>
-                <div v-for="(vote,index) in votes.selected" :key="index">
+                <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': votes.selected[index] !== '', 'unselected': votes.selected[index] === ''}" v-for="(vote,index) in votes.selected" :key="index">
+                    <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(index)">
+                        <span class="align-middle">{{points[index]}}</span>
+                    </div>
                     <div class="form-group" v-if="votes.selected[index] === ''">
-                        <label :for="'vote' + index" class="m-3">{{points[index]}} Points</label>
-                        <select class="form-control" :id="'vote' + index" v-model="votes.selected[index]">
+                        <select class="custom-select d-block w-100" :id="'vote' + index" v-model="votes.selected[index]">
                             <option v-for="country in availableCountries()" :value="country.id" :key="country.id">{{country.number + ' - ' + country.name + ' - ' + country.artist +  ' - ' + country.song}}</option>
                         </select>
                     </div>
-                    <div class="form-group"  v-else>
-                        <label :for="'vote' + index" class="m-3">{{points[index]}} Points:</label>
-                        <span :id="'vote' + index">{{countries.find(x => x.id === votes.selected[index]).name}}</span>
-                        <button class="btn btn-danger btn-sm mx-2" @click="removeVote(index)">X</button>
+                    <div v-else>
+                        <div class="flex-grow-1">
+                            {{countries.find(x => x.id === votes.selected[index]).name}}
+                            <button class="btn btn-danger btn-sm mx-2" @click="removeVote(index)">X</button>
+                        </div>
+                        
                     </div>
                 </div>
-                <button class="btn btn-primary btn-lg" v-if="votes.selected.every(x => x !== '') && votes.name !== ''" @click="submit">Submit</button>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary btn-lg" :disabled="!votes.selected.every(x => x !== '') || votes.name === ''" @click="submit">Submit</button>
+                </div>
             </div>
         </div>
     </div>
@@ -61,6 +68,14 @@
                 this.$emit('submit-votes',this.votes);
                 localStorage.vote2020 = true;
                 this.$router.push("/");
+            },
+            getNumberClass(index) {
+                switch(index) {
+                    case 0 : return "first";
+                    case 1 : return "second";
+                    case 2 : return "third";
+                    default : return "other";
+                }
             }
         }
     }
@@ -102,23 +117,23 @@
         font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
-        font-size: 4vh;
-        height: 7vh;
+        font-size: 3vh;
+        height: 6.5vh;
     }
 
     .unselected {
         background: rgb(21, 34, 109);
     }
-
+    
     .selected {
         background: rgb(5,60,172);
         background: linear-gradient(90deg, rgba(5,60,172,1) 0%, rgba(14,50,186,1) 17%, rgba(12,186,255,1) 100%);
     }
-
+    
     .number-box {
-        height: 7vh;
+        height: 6.5vh;
         width: 15vh;
-        font-size: 7vh;
+        font-size: 6vh;
     }
 
     .other {
@@ -140,5 +155,11 @@
     .flag {
         height: 5.5vh;
         width: 10vh;
+    }
+    .dropdown-menu {
+        width: 80%;
+    }
+    .small-text {
+        font-size: 0.7rem;
     }
 </style>

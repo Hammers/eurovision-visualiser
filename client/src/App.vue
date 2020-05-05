@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="w-100">
     <!--
     <div class="justify-content-center h-50" v-if="!component">
       <img src="../public/ESC2020_Rotterdam_white.png" alt="" class="h-75">
@@ -28,6 +28,8 @@
         resultsEnabled: false,
         audienceMode: false,
         nextAudienceVote: null,
+        totalVotes: 0,
+        votesDisplayed: 0,
       };
     },
     created() {
@@ -38,7 +40,7 @@
         if(this.$route.path === '/admin') {
           return { votes: this.votes, votingEnabled: this.votingEnabled, resultsEnabled: this.resultsEnabled, nextAudienceVote: this.nextAudienceVote }
         } else {
-          return { totals: this.totals, current: this.current, audienceMode: this.audienceMode, votingEnabled: this.votingEnabled, resultsEnabled: this.resultsEnabled }
+          return { totals: this.totals, current: this.current, audienceMode: this.audienceMode, votingEnabled: this.votingEnabled, resultsEnabled: this.resultsEnabled, votesDisplayed: this.votesDisplayed, totalVotes: this.totalVotes }
         }
       }
     },
@@ -59,6 +61,8 @@
           this.audienceMode = fetchedData.audienceMode;
           this.votingEnabled = fetchedData.votingEnabled;
           this.resultsEnabled = fetchedData.resultsEnabled;
+          this.totalVotes = fetchedData.totalVotes;
+          this.votesDisplayed = fetchedData.votesDisplayed;
         });
         socket.on("admindata", fetchedData => {
           console.log("data received");
@@ -73,11 +77,11 @@
         votes.selected.reverse();
         socket.emit("submitVotes",votes)
       },
-      bottomSeven(name) {
-        socket.emit("bottomSeven",{name})
+      bottomSeven(id) {
+        socket.emit("bottomSeven",{id})
       },
-      top(name) {
-        socket.emit("top",{name})
+      top(id) {
+        socket.emit("top",{id})
       },
       next() {
         socket.emit("next")
