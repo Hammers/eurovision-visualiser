@@ -48,10 +48,10 @@
       getRealtimeData() {
         console.log(this.$route);
         if(this.$route.path === '/admin') {
-          socket = io.connect("http://localhost:3000/admin")
+          socket = io.connect()
         }
         else {
-          socket = io.connect("http://localhost:3000")
+          socket = io.connect()
         }
         socket.on("newdata", fetchedData => {
           console.log("data received");
