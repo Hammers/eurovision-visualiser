@@ -1,210 +1,179 @@
 [
   {
-    "id": "is",
-    "name": "Israel",
-    "artist": "Eden Alene",
-    "song": "Feker Libi",
-    "flag": "israel.png",
+    "id": "sw",
+    "name": "Sweden",
+    "artist": "Anna Bergendahl",
+    "song": "Kingdom Come",
+    "flag": "sweden.png",
     "number": 1
   },
   {
-    "id": "ab",
-    "name": "Albania",
-    "artist": "Arelina Ara",
-    "song": "Shaj",
-    "flag": "albania.png",
+    "id": "au",
+    "name": "Australia",
+    "artist": "Jaguar Jonze",
+    "song": "Rabbit Hole",
+    "flag": "serbia.png",
     "number": 2
   },
   {
-    "id": "gr",
-    "name": "Greece",
-    "artist": "Stefania",
-    "song": "SUPERG!RL",
-    "flag": "greece.png",
+    "id": "sl",
+    "name": "Slovenia",
+    "artist": "Lina Kuduzović",
+    "song": "Man Like You",
+    "flag": "slovenia.png",
     "number": 3
   },
   {
-    "id": "sz",
-    "name": "Switzerland",
-    "artist": "Gjon's Tears",
-    "song": "Respondez-Moi",
-    "flag": "switzerland.png",
+    "id": "li",
+    "name": "Lithuania",
+    "artist": "Moniqué",
+    "song": "Make Me Human",
+    "flag": "lithuania.png",
     "number": 4
   },
   {
-    "id": "ma",
-    "name": "Malta",
-    "artist": "Destiny",
-    "song": "All Of My Love",
-    "flag": "malta.png",
+    "id": "cr",
+    "name": "Croatia",
+    "artist": "Indira Levak",
+    "song": "You Will Never Break My Heart",
+    "flag": "croatia.png",
     "number": 5
-  },
-  {
-    "id": "ru",
-    "name": "Russia",
-    "artist": "Little Big",
-    "song": "Uno",
-    "flag": "russia.png",
-    "number": 6
-  },
-  {
-    "id": "as",
-    "name": "Austria",
-    "artist": "Vincent Bueno",
-    "song": "Alive",
-    "flag": "austria.png",
-    "number": 7
-  },
-  {
-    "id": "bu",
-    "name": "Bulgaria",
-    "artist": "Victoria",
-    "song": "Tears Getting Sober",
-    "flag": "bulgaria.png",
-    "number": 8
-  },
-  {
-    "id" : "uk",
-    "name": "United Kingdom",
-    "artist": "James Newman",
-    "song": "My Last Breath",
-    "flag": "uk.webp",
-    "number": 9
-  },
-  {
-    "id": "oz",
-    "name": "Australia",
-    "artist": "Montaigne",
-    "song": "Don't Break Me",
-    "flag": "australia.png",
-    "number": 10
-  },
-  {
-    "id": "az",
-    "name": "Azerbaijan",
-    "artist": "Efendi",
-    "song": "Cleopatra",
-    "flag": "azerbaijan.png",
-    "number": 11
   },
   {
     "id": "no",
     "name": "Norway",
-    "artist": "Ulrikke",
-    "song": "Attention",
+    "artist": "Rein Alexander",
+    "song": "One Last Time",
     "flag": "norway.png",
-    "number": 12
+    "number": 6
   },
   {
-    "id": "ur",
-    "name": "Ukraine",
-    "artist": "Go_A",
-    "song": "Solovey",
-    "flag": "ukraine.png",
-    "number": 13
-  },
-  {
-    "id": "sm",
-    "name": "San Marino",
-    "artist": "Senhit",
-    "song": "Freaky!",
-    "flag": "sanmarino.png",
-    "number": 14
-  },
-  {
-    "id": "sw",
-    "name": "Sweden",
-    "artist": "The Mamas",
-    "song": "Move",
-    "flag": "sweden.png",
-    "number": 15
-  },
-  {
-    "id": "fi",
-    "name": "Finland",
-    "artist": "Aksel",
-    "song": "Looking Back",
-    "flag": "finland.png",
-    "number": 16
-  },
-  {
-    "id": "ic",
-    "name": "Iceland",
-    "artist": "Dadi & Gagnamid",
-    "song": "Think About Things",
-    "flag": "iceland.png",
-    "number": 17
-  },
-  {
-    "id": "sp",
-    "name": "Spain",
-    "artist": "",
-    "song": "Universo",
-    "flag": "spain.png",
-    "number": 18
+    "id": "is",
+    "name": "Israel",
+    "artist": "Eden Alene",
+    "song": "Roots",
+    "flag": "israel.png",
+    "number": 7
   },
   {
     "id": "ro",
     "name": "Romania",
     "artist": "Roxen",
-    "song": "Alcohol You",
+    "song": "Cherry Red",
     "flag": "romania.png",
-    "number": 19
+    "number": 8
   },
   {
-    "id": "de",
-    "name": "Denmark",
-    "artist": "Ben & Tan",
-    "song": "Yes",
-    "flag": "denmark.png",
-    "number": 20
+    "id": "ur",
+    "name": "Ukraine",
+    "artist": "Khayat",
+    "song": "Call For Love",
+    "flag": "ukraine.png",
+    "number": 9
+  },
+
+  {
+    "id": "it",
+    "name": "Italy",
+    "artist": "Elodie",
+    "song": "Andromeda",
+    "flag": "italy.png",
+    "number": 10
   },
   {
-    "id": "fr",
-    "name": "France",
-    "artist": "Tom Leeb",
-    "song": "Mon Aliee (The Best In Me)",
-    "flag": "france.png",
-    "number": 21
+    "id": "es",
+    "name": "Estonia",
+    "artist": "Jaagup Tuisk",
+    "song": "Beautiful Lie",
+    "flag": "estonia.png",
+    "number": 11
   },
   {
-    "id": "ge",
-    "name": "Germany",
-    "artist": "Ben Dolic",
-    "song": "Violent Thing",
-    "flag": "germany.png",
-    "number": 22
+    "id": "sm",
+    "name": "San Marino",
+    "artist": "Senhit",
+    "song": "Obsessed",
+    "flag": "sanmarino.png",
+    "number": 12
   },
   {
-    "id": "ne",
-    "name": "Netherlands",
-    "artist": "Jeangu ",
-    "song": "Grow",
-    "flag": "netherlands.png",
-    "number": 23
-  },
-  {
-    "id": "li",
-    "name": "Lithuania",
-    "artist": "The Roop",
-    "song": "On Fire",
-    "flag": "lithuania.png",
-    "number": 24
+    "id": "cz",
+    "name": "Czech Republic",
+    "artist": "Elis Mraz feat. Čis T",
+    "song": "Wanna Be Like",
+    "flag": "czechrepublic.png",
+    "number": 13
   },
   {
     "id": "se",
     "name": "Serbia",
-    "artist": "Hurricane",
-    "song": "Hasta La Vista",
+    "artist": "Andrija Jo",
+    "song": "Oči Meduze",
     "flag": "serbia.png",
-    "number": 25
+    "number": 14
   },
   {
-    "id": "it",
-    "name": "Italy",
-    "artist": "Diodato",
-    "song": "Fai Rumore",
-    "flag": "italy.png",
-    "number": 26
+    "id": "po",
+    "name": "Poland",
+    "artist": "Albert Černý",
+    "song": "Lucy",
+    "flag": "poland.png",
+    "number": 15
+  },
+  {
+    "id": "ic",
+    "name": "Iceland",
+    "artist": "Dimma",
+    "song": "Almyrkvi",
+    "flag": "iceland.png",
+    "number": 16
+  },
+  {
+    "id": "de",
+    "name": "Denmark",
+    "artist": "Jasmine Rose ft. RoxorLoops",
+    "song": "Human",
+    "flag": "denmark.png",
+    "number": 17
+  },
+  {
+    "id": "ab",
+    "name": "Albania",
+    "artist": "Elvana Gatja",
+    "song": "Me Tana",
+    "flag": "albania.png",
+    "number": 18
+  },
+  {
+    "id": "fi",
+    "name": "Finland",
+    "artist": "Erika Vikman",
+    "song": "Cicciolina",
+    "flag": "finland.png",
+    "number": 19
+  },
+  {
+    "id" : "ar",
+    "name": "Armenia",
+    "artist": "TOKIONINE",
+    "song": "Save Me",
+    "flag": "armenia.png",
+    "number": 20
+  },
+  {
+    "id": "pt",
+    "name": "Portugal",
+    "artist": "Bárbara Tinoco",
+    "song": "Passe-Partout",
+    "flag": "portugal.png",
+    "number": 21
+  },
+  {
+    "id": "la",
+    "name": "Latvia",
+    "artist": "Katrīna Dimanta",
+    "song": "Heartbeats",
+    "flag": "latvia.png",
+    "number": 22
   }
 ]

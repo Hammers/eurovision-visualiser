@@ -12,36 +12,32 @@ let votingEnabled = false;
 let resultsEnabled = false;
 let votes = [];
 let audiencePoints = {
-    "is": 29700,
-    "ab": 20092,
-    "gr": 25574,
-    "sz": 79877,
-    "ma": 55896,
-    "ru": 58672,
-    "as": 10688,
-    "bu": 62857,
-    "uk": 9362,
-    "oz": 35993,
-    "az": 53105,
-    "no": 62394,
-    "ur": 36089,
-    "sm": 3278,
-    "sw": 42367,
-    "fi": 5182,
-    "ic": 58915,
-    "sp": 12298,
-    "ro": 43403,
-    "de": 21966,
-    "fr": 6788,
-    "ge": 52638,
-    "ne": 12924,
-    "li": 86690,
-    "se": 21552,
-    "it": 36666
+    "sw": 344,
+    "fi": 302,
+    "it": 253,
+    "ab": 230,
+    "no": 158,
+    "de": 149,
+    "ur": 118,
+    "ro": 113,
+    "li": 98,
+    "cr": 92,
+    "is": 82,
+    "pt": 62,
+    "po": 51,
+    "es": 47,
+    "cz": 44,
+    "se": 42,
+    "sm": 40,
+    "au": 24,
+    "la": 9,
+    "ic": 4,
+    "sl": 0,
+    "ar": 0
 };
 let audienceVotes = [];
 let juryTotal = 0;
-let audienceTotal = 944966;
+let audienceTotal = 2262;
 let nextAudienceIndex = 0;
 let nextAudienceVote = null;
 mongoose.set('useNewUrlParser', true);
