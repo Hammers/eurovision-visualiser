@@ -47,7 +47,7 @@
       getRealtimeData() {
         console.log(this.$route);
         if(this.$route.path === '/admin') {
-          socket = io.connect()
+          socket = io.connect('/admin')
         }
         else {
           socket = io.connect()
