@@ -1,14 +1,14 @@
 <template>
-    <div class="container d-flex align-items-center justify-content-center mt-5 text-light">
+    <div class="container d-flex align-items-center justify-content-center mt-5">
         <div class="row justify-content-center align-items-center w-100">
             <div class="col-12 col-lg-8 form-inline w-100 justify-content-center">
                 <div class="d-flex form-group justify-content-center">
                     <label for="nameInput" class="m-3">Your Name</label>
                     <input type="text" class="form-control" id="nameInput" placeholder="Enter name..." v-model="votes.name">
-                    <span class="small-text w-25 m-3"> Ryan will use this to work out who's votes are who's so please make sure this is something recognisable! (It's not stored anywhere and only Ryan will see it)</span>
+                    <span class="small-text w-25 m-3"> Ryan will use this to work out who's votes are who's so please make sure this is something recognisable!</span>
                 </div>
                 <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': votes.selected[index] !== '', 'unselected': votes.selected[index] === ''}" v-for="(vote,index) in votes.selected" :key="index">
-                    <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(index)">
+                    <div class="number-box me-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(index)">
                         <span class="align-middle">{{points[index]}}</span>
                     </div>
                     <div class="form-group" v-if="votes.selected[index] === ''">
@@ -35,7 +35,7 @@
 <script>
     import countries from '../../../json/countries'
     export default {
-        name: "",
+        name: "voting-item",
         data() {
             return {
                 points: [12,10,8,7,6,5,4,3,2,1],
@@ -114,7 +114,6 @@
     }
 
     .country-box {
-        font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
         font-size: 3vh;
@@ -122,12 +121,11 @@
     }
 
     .unselected {
-        background: rgb(21, 34, 109);
+        background: #0043FF;
     }
     
     .selected {
-        background: rgb(5,60,172);
-        background: linear-gradient(90deg, rgba(5,60,172,1) 0%, rgba(14,50,186,1) 17%, rgba(12,186,255,1) 100%);
+        background: #0043FF;
     }
     
     .number-box {
@@ -137,7 +135,7 @@
     }
 
     .other {
-        background: rgb(110, 196, 240);
+        background: #F80083;
     }
 
     .first {

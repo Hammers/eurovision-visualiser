@@ -1,9 +1,9 @@
 <template>
-    <div class="home-body text-center">
+    <div class="home-body text-center h-100">
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <main role="main" class="inner cover" >
             <img src="VirtualEurovisionLogo.png" alt="" class="w-100">
-            <h1 class="cover-heading">Good Evening Europe!</h1>
+            <h1 class="cover-heading pink">UNITED BY MUSIC</h1>
             <p class="lead">Here you will be able to submit your votes as well as watch the results be revealed live!</p>
             <p class="lead" v-if="!resultsEnabled">
                 <span v-if="voted">Thanks for voting!</span>
@@ -23,7 +23,7 @@
 
 <script>
     export default {
-        name: "",
+        name: "home-item",
         props: ["totals", "current", "audienceMode", "votingEnabled", "resultsEnabled"],
         data() {
             return {
@@ -51,7 +51,11 @@
     
 
     .home-body {
-        color: #fff;
+      height: 100%;
+      background-color: #FFF800;
+      color: #02025E;
+      text-transform: uppercase;
+      font-family: 'penny_lanebold';
     }
 
     .cover-container {
@@ -63,6 +67,9 @@
     }
     .cover .btn-lg {
         padding: .75rem 1.25rem;
-        font-weight: 700;
+        font-weight: 400;
+    }
+    .pink {
+      color: #F80083;
     }
 </style>

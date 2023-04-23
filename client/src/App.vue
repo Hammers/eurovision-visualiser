@@ -1,8 +1,7 @@
 <template>
-  <div class="w-100">
+  <div class="w-100 app">
     <!--
     <div class="justify-content-center h-50" v-if="!component">
-      <img src="../public/ESC2020_Rotterdam_white.png" alt="" class="h-75">
       <div class="d-flex justify-content-around">
         <button class="btn btn-primary btn-lg" @click="goViewer">View</button>
         <button class="btn btn-warning btn-lg" @click="goInput">Input</button>
@@ -103,24 +102,33 @@
 </script>
 
 <style>
-  
+
+@font-face {
+  font-family: 'penny_lanebold';
+  src: url('../public/penny-lane-bold-webfont.woff2') format('woff2'),
+  url('../public/penny-lane-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
   html {
+    background-color: #FFF800;
     height: 100%;
   }
   
-  body {
-    height: 100%;
-    background-image: url(../public/wil-stewart-RpDA3uYkJWM-unsplash.jpg);
-    font-family: 'Montserrat';
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    color: #fff;
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  #app {
+    font-family: 'penny_lanebold';
+    text-transform: uppercase;
+    color: #02025E;
+    background-color: #FFF800;
+  }
+  
+  .app {
+  font-family: 'penny_lanebold';
+  color: #02025E;
+  background-color: #FFF800;
+    text-transform: uppercase;
   }
   
 </style>

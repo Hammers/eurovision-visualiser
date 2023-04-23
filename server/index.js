@@ -40,10 +40,7 @@ let juryTotal = 0;
 let audienceTotal = 2262;
 let nextAudienceIndex = 0;
 let nextAudienceVote = null;
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb://localhost/eurovision");
+
 
 let totals = {};
 for (var i = 0; i < countries.length; i++) {
@@ -51,6 +48,7 @@ for (var i = 0; i < countries.length; i++) {
 }
 
 let current = [];
+
 
 // Handle production
 if (process.env.NODE_ENV === 'production') {

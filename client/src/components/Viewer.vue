@@ -4,32 +4,32 @@
                 <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
-                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
-                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="showNumberBox(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag h-100 me-3" v-if="!showNumberBox(country)">
+                            <div class="number-box me-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
                             <div class="flex-grow-1">
                                 {{country.name}}
                             </div>
-                            <div class=" mr-3">{{country.value}}</div>
+                            <div class=" me-3 vote-total">{{country.value}}</div>
                         </div>
                     </transition-group>
                 </div>
                 <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
                         <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
-                            <img :src="'flags/' + country.flag" alt="" class="flag mx-4 my-2" v-if="!showNumberBox(country)">
-                            <div class="number-box mr-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="showNumberBox(country)">
+                            <img :src="'flags/' + country.flag" alt="" class="flag h-100 me-3" v-if="!showNumberBox(country)">
+                            <div class="number-box me-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
                             </div>
                             <div class="flex-grow-1">
                                 {{country.name}}
                             </div>
-                            <div class=" mr-3">{{country.value}}</div>
+                            <div class=" me-5 vote-total">{{country.value}}</div>
                         </div>
                     </transition-group>
                 </div>
-                <div class="col-2 d-flex justify-content-center text-light vote-text align-items-center">
+                <div class="col-2 d-flex justify-content-center vote-text align-items-center">
                     <span class="vote-text-number mx-2">{{votesDisplayed}}</span> OF <span class="vote-text-number mx-2">{{totalVotes}}</span> COUNTRIES VOTING
                 </div>
                 <div class="col-7">
@@ -45,7 +45,7 @@
 <script>
     import countries from '../../../json/countries'
     export default { 
-        name: "",
+        name: "viewer-item",
         props: ["totals","current","audienceMode","totalVotes","votesDisplayed"],
         data() {
             return {
@@ -131,7 +131,6 @@
     }
     
     .country-box {
-        font-family: 'Montserrat';
         text-transform: uppercase;
         vertical-align: middle;
         font-size: 3.5vh;
@@ -139,22 +138,21 @@
     }
 
     .unselected {
-        background: rgb(21, 34, 109);
+        background: #02025E;
     }
     
     .selected {
-        background: rgb(5,60,172);
-        background: linear-gradient(90deg, rgba(5,60,172,1) 0%, rgba(14,50,186,1) 17%, rgba(12,186,255,1) 100%);
+        background: #0043FF;
     }
 
     .number-box {
         height: 7vh;
-        width: 15vh;
-        font-size: 7vh;
+        width: 10vh;
+        font-size: 6vh;
     }
     
     .other {
-        background: rgb(110, 196, 240);
+        background: #F80083;
     }
     
     .first {
@@ -181,12 +179,16 @@
     .vote-text-number {
         font-size: 1.2rem;
     }
+
+    .vote-total {
+      padding-right: 20px;
+    }
     
     .progress {
-        background-color: rgb(21, 34, 109);
+        background-color: #02025E;
     }
     
     .progress-bar {
-        background-color: rgb(110, 196, 240);
+        background-color: #0043FF;
     }
 </style>

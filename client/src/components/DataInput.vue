@@ -35,7 +35,7 @@
 <script>
     import countries from '../../../json/countries'
     export default {
-        name: "",
+        name: "data-input",
         props: ["votes","votingEnabled","resultsEnabled","nextAudienceVote"],
         data() {
             return {
