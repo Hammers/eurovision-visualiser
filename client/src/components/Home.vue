@@ -31,7 +31,7 @@
             }
         },
         mounted() {
-            if(localStorage.vote2023)
+            if(localStorage.vote2021)
             {
                 this.voted = true;
             }
