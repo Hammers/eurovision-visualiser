@@ -66,7 +66,7 @@
             submit() {
                 console.log(this.votes);
                 this.$emit('submit-votes',this.votes);
-                localStorage.vote2021 = true;
+                localStorage.vote2023 = true;
                 this.$router.push("/");
             },
             getNumberClass(index) {
