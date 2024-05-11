@@ -66,7 +66,7 @@
             submit() {
                 console.log(this.votes);
                 this.$emit('submit-votes',this.votes);
-                localStorage.vote2023 = true;
+                localStorage.vote2024 = true;
                 this.$router.push("/");
             },
             getNumberClass(index) {
@@ -157,7 +157,11 @@
     .dropdown-menu {
         width: 80%;
     }
+    .container {
+      color: #FFFFFF;
+    }
     .small-text {
         font-size: 0.7rem;
+      color: #FFFFFF;
     }
 </style>

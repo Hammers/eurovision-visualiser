@@ -1,211 +1,211 @@
 [
   {
-    "id": "as",
-    "name": "Austria",
-    "artist": "Teya & Salena",
-    "song": "Who The Hell Is Edgar?",
-    "flag": "austria.png",
+    "id": "sw",
+    "name": "Sweden",
+    "artist": "Marcus & Martinus",
+    "song": "Unforgettable",
+    "flag": "sweden.png",
     "number": 1
   },
   {
-    "id": "pt",
-    "name": "Portugal",
-    "artist": "Mimicat",
-    "song": "Ai Coração",
-    "flag": "portugal.png",
+    "id": "ur",
+    "name": "Ukraine",
+    "artist": "alyona alyona & Jerry Heil",
+    "song": "Teresa & Maria",
+    "flag": "ukraine.png",
     "number": 2
   },
   {
-    "id": "sz",
-    "name": "Switzerland",
-    "artist": "Remo Forrer",
-    "song": "Watergun",
-    "flag": "switzerland.png",
+    "id": "ge",
+    "name": "Germany",
+    "artist": "ISAAK",
+    "song": "Always On The Run",
+    "flag": "germany.png",
     "number": 3
   },
   {
-    "id": "po",
-    "name": "Poland",
-    "artist": "Blanka",
-    "song": "Solo",
-    "flag": "poland.png",
+    "id": "lu",
+    "name": "Luxembourg ",
+    "artist": "TALI",
+    "song": "Fighter",
+    "flag": "luxembourg.png",
     "number": 4
   },
   {
-    "id": "se",
-    "name": "Serbia",
-    "artist": "Luke Black",
-    "song": "Samo Mi Se Spava",
-    "flag": "serbia.png",
+    "id": "ne",
+    "name": "Netherlands",
+    "artist": "Joost Klein",
+    "song": "Europapa",
+    "flag": "netherlands.png",
     "number": 5
   },
   {
-    "id": "fr",
-    "name": "France",
-    "artist": "La Zarra",
-    "song": "Évidemment",
-    "flag": "france.png",
+    "id": "is",
+    "name": "Israel",
+    "artist": "Eden Golan",
+    "song": "Hurricane",
+    "flag": "israel.png",
     "number": 6
   },
   {
-    "id": "cy",
-    "name": "Cyprus",
-    "artist": "Andrew Lambrou",
-    "song": "Break A Broken Heart",
-    "flag": "cyprus.png",
+    "id": "li",
+    "name": "Lithuania",
+    "artist": "Silvester Belt",
+    "song": "Luktelk",
+    "flag": "lithuania.png",
     "number": 7
   },
   {
     "id": "sp",
     "name": "Spain",
-    "artist": "Blanca Paloma",
-    "song": "EAEA",
+    "artist": "Nebulossa",
+    "song": "ZORRA",
     "flag": "spain.png",
     "number": 8
   },
   {
-    "id": "sw",
-    "name": "Sweden",
-    "artist": "Loreen",
-    "song": "Tattoo",
-    "flag": "sweden.png",
+    "id": "es",
+    "name": "Estonia",
+    "artist": "5MIINUST x Puuluup",
+    "song": "(nendest) narkootikumidest ei tea me (küll) midagi",
+    "flag": "estonia.png",
     "number": 9
   },
 
   {
-    "id": "al",
-    "name": "Albania",
-    "artist": "Albina & Familja Kelmendi",
-    "song": "Duje",
-    "flag": "albania.png",
+    "id": "ir",
+    "name": "Ireland",
+    "artist": "Bambie Thug",
+    "song": "Doomsday Blue",
+    "flag": "ireland.png",
     "number": 10
   },
   {
-    "id": "it",
-    "name": "Italy",
-    "artist": "Marco Mengoni",
-    "song": "Due Vite",
-    "flag": "italy.png",
+    "id": "la",
+    "name": "Latvia",
+    "artist": "Dons",
+    "song": "Hollow",
+    "flag": "latvia.png",
     "number": 11
   },
   {
-    "id": "es",
-    "name": "Estonia",
-    "artist": "Alika",
-    "song": "Bridges",
-    "flag": "estonia.png",
+    "id": "gr",
+    "name": "Greece",
+    "artist": "Marina Satti",
+    "song": "ZARI",
+    "flag": "greece.png",
     "number": 12
-  },
-  {
-    "id": "fi",
-    "name": "Finland",
-    "artist": "Käärijä",
-    "song": "Cha Cha Cha",
-    "flag": "finland.png",
-    "number": 13
-  },
-  {
-    "id": "cz",
-    "name": "Czechia",
-    "artist": "Vesna",
-    "song": "My Sister's Crown",
-    "flag": "czechrepublic.png",
-    "number": 14
-  },
-  {
-    "id": "au",
-    "name": "Australia",
-    "artist": "Voyager",
-    "song": "Promise",
-    "flag": "australia.png",
-    "number": 15
-  },
-  {
-    "id": "be",
-    "name": "Belgium",
-    "artist": "Gustaph",
-    "song": "Because Of You",
-    "flag": "belgium.png",
-    "number": 16
-  },
-  {
-    "id": "ar",
-    "name": "Armenia",
-    "artist": "Brunette",
-    "song": "Future Lover",
-    "flag": "armenia.png",
-    "number": 17
-  },
-  {
-    "id": "mo",
-    "name": "Moldova",
-    "artist": "Pasha Parfeni",
-    "song": "Soarele şi Luna",
-    "flag": "moldova.png",
-    "number": 18
-  },
-  {
-    "id": "ur",
-    "name": "Ukraine",
-    "artist": "Tvorchi",
-    "song": "Heart Of Steel",
-    "flag": "ukraine.png",
-    "number": 19
-  },
-  {
-    "id" : "no",
-    "name": "Norway",
-    "artist": "Alessandra",
-    "song": "Queen Of Kings",
-    "flag": "norway.png",
-    "number": 20
-  },
-  {
-    "id": "ge",
-    "name": "Germany",
-    "artist": "Lord of the Lost",
-    "song": "Blood & Gitter",
-    "flag": "germany.png",
-    "number": 21
-  },
-  {
-    "id": "li",
-    "name": "Lithuania",
-    "artist": "Monika Linkytė",
-    "song": "Stay",
-    "flag": "lithuania.png",
-    "number": 22
-  },
-  {
-    "id": "is",
-    "name": "Israel",
-    "artist": "Noa Kirel",
-    "song": "Unicorn",
-    "flag": "israel.png",
-    "number": 23
-  },
-  {
-  "id": "sl",
-  "name": "Slovenia",
-  "artist": "Joker Out",
-  "song": "Carpe Diem",
-  "flag": "slovenia.png",
-  "number": 24
-  },
-  {
-    "id": "cr",
-    "name": "Croatia",
-    "artist": "Let 3",
-    "song": "Mama ŠČ!",
-    "flag": "croatia.png",
-    "number": 25
   },
   {
     "id": "uk",
     "name": "United Kingdom",
-    "artist": "Mae Muller",
-    "song": "I Wrote A Song",
+    "artist": "Olly Alexander",
+    "song": "Dizzy",
     "flag": "uk.webp",
+    "number": 13
+  },
+  {
+    "id": "no",
+    "name": "Norway",
+    "artist": "Gåte",
+    "song": "Ulveham",
+    "flag": "norway.png",
+    "number": 14
+  },
+  {
+    "id": "it",
+    "name": "Italy",
+    "artist": "Angelina Mango",
+    "song": "La Noia",
+    "flag": "italy.png",
+    "number": 15
+  },
+  {
+    "id": "se",
+    "name": "Serbia",
+    "artist": "TEYA DORA",
+    "song": "RAMONDA",
+    "flag": "serbia.png",
+    "number": 16
+  },
+  {
+    "id": "fi",
+    "name": "Finland",
+    "artist": "Windows95Man",
+    "song": "No Rules!",
+    "flag": "finland.png",
+    "number": 17
+  },
+  {
+    "id": "po",
+    "name": "Portugal",
+    "artist": "iolanda",
+    "song": "Grito",
+    "flag": "portugal.png",
+    "number": 18
+  },
+  {
+    "id" : "ar",
+    "name": "Armenia",
+    "artist": "LADANIVA",
+    "song": "Jako",
+    "flag": "armenia.png",
+    "number": 20
+  },
+  {
+    "id": "cy",
+    "name": "Cyprus",
+    "artist": "Silia Kapsis",
+    "song": "Liar",
+    "flag": "cyprus.png",
+    "number": 20
+  },
+  {
+    "id": "sw",
+    "name": "Switzerland",
+    "artist": "Nemo",
+    "song": "The Code",
+    "flag": "switzerland.png",
+    "number": 21
+  },
+  {
+    "id": "sl",
+    "name": "Slovenia",
+    "artist": "Raiven",
+    "song": "Veronika",
+    "flag": "slovenia.png",
+    "number": 22
+  },
+  {
+    "id": "cr",
+    "name": "Croatia",
+    "artist": "Baby Lasagna",
+    "song": "Rim Tim Tagi Dim",
+    "flag": "croatia.png",
+    "number": 23
+  },
+  {
+  "id": "go",
+  "name": "Georgia",
+  "artist": "Nutsa Buzaladze",
+  "song": "Firefighter",
+  "flag": "georgia.png",
+  "number": 24
+  },
+  {
+    "id": "fr",
+    "name": "France",
+    "artist": "Slimane",
+    "song": "Mon Amour",
+    "flag": "france.png",
+    "number": 25
+  },
+  {
+    "id": "au",
+    "name": "Austria",
+    "artist": "Kaleen",
+    "song": "We Will Rave",
+    "flag": "austria.png",
     "number": 26
   }
 ]

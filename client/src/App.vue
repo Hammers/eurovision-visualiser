@@ -104,30 +104,31 @@
 <style>
 
 @font-face {
-  font-family: 'penny_lanebold';
-  src: url('../public/penny-lane-bold-webfont.woff2') format('woff2'),
-  url('../public/penny-lane-bold-webfont.woff') format('woff');
+  font-family: 'OPTIAuvantGothic';
+  src: 
+  url('../public/OPTIAuvantGothic-Medium.woff2') format('woff2'),
+  url('../public/OPTIAuvantGothic-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 
   html {
-    background-color: #FFF800;
+    background-color: #2B0E50;
     height: 100%;
   }
   
   #app {
-    font-family: 'penny_lanebold';
+    font-family: 'OPTIAuvantGothic';
     text-transform: uppercase;
-    color: #02025E;
-    background-color: #FFF800;
+    color: #000000;
+    background-color: #2B0E50;
   }
   
   .app {
-  font-family: 'penny_lanebold';
-  color: #02025E;
-  background-color: #FFF800;
+  font-family: 'OPTIAuvantGothic';
+  color: #000000;
+  background-color: #2B0E50;
     text-transform: uppercase;
   }
   

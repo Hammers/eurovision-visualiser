@@ -31,7 +31,7 @@
             }
         },
         mounted() {
-            if(localStorage.vote2023)
+            if(localStorage.vote2024)
             {
                 this.voted = true;
             }
@@ -52,10 +52,10 @@
 
     .home-body {
       height: 100%;
-      background-color: #FFF800;
-      color: #02025E;
+      background-color: #2B0E50;
+      color: #FFFFFF;
       text-transform: uppercase;
-      font-family: 'penny_lanebold';
+      font-family: 'OPTIAuvantGothic';
     }
 
     .cover-container {
@@ -70,6 +70,6 @@
         font-weight: 400;
     }
     .pink {
-      color: #F80083;
+      color: #E92BAC;
     }
 </style>

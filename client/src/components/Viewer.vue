@@ -138,11 +138,11 @@
     }
 
     .unselected {
-        background: #02025E;
+        background: #512293;
     }
     
     .selected {
-        background: #0043FF;
+        background: #FC6E2E;
     }
 
     .number-box {
@@ -174,21 +174,24 @@
     
     .vote-text {
         font-size: 0.9rem;
+        color: #FFFFFF;
     }
 
     .vote-text-number {
         font-size: 1.2rem;
+        color: #FFFFFF;
     }
 
     .vote-total {
       padding-right: 20px;
+      color: #FFFFFF;
     }
     
     .progress {
-        background-color: #02025E;
+        background-color: #512293;
     }
     
     .progress-bar {
-        background-color: #0043FF;
+        background-color: #F80083;
     }
 </style>
