@@ -1,5 +1,5 @@
 <template>
-    <div class="container my-3">
+    <div class="container black my-3">
         <div class="card row justify-content-center">
             <div v-for="(vote,index) in votes" :key="index">
                 <div>
@@ -80,5 +80,7 @@
 </script>
 
 <style scoped>
-
+.black {
+  color: #111111;
+}
 </style>

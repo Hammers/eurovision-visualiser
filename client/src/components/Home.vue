@@ -3,7 +3,7 @@
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <main role="main" class="inner cover" >
             <img src="VirtualEurovisionLogo.png" alt="" class="w-100">
-            <h1 class="cover-heading pink">UNITED BY MUSIC</h1>
+            <h1 class="cover-heading pink">United By Music</h1>
             <p class="lead">Here you will be able to submit your votes as well as watch the results be revealed live!</p>
             <p class="lead" v-if="!resultsEnabled">
                 <span v-if="voted">Thanks for voting!</span>
@@ -31,7 +31,7 @@
             }
         },
         mounted() {
-            if(localStorage.vote2024)
+            if(localStorage.vote2025)
             {
                 this.voted = true;
             }
@@ -52,10 +52,9 @@
 
     .home-body {
       height: 100%;
-      background-color: #2B0E50;
+      background-color: #111111;
       color: #FFFFFF;
-      text-transform: uppercase;
-      font-family: 'OPTIAuvantGothic';
+      font-family: 'SwissNowTrial';
     }
 
     .cover-container {
@@ -70,6 +69,7 @@
         font-weight: 400;
     }
     .pink {
-      color: #E92BAC;
+      font-family: "Source Serif 4", serif;
+      color: #FC6E2E;
     }
 </style>

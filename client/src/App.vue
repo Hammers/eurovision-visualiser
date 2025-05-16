@@ -104,32 +104,38 @@
 <style>
 
 @font-face {
+  font-family: 'SwissNowTrial';
+  src:
+  url('../public/SwissNowTrial-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
   font-family: 'OPTIAuvantGothic';
-  src: 
-  url('../public/OPTIAuvantGothic-Medium.woff2') format('woff2'),
-  url('../public/OPTIAuvantGothic-Medium.woff') format('woff');
+  src:
+      url('../public/OPTIAuvantGothic-Medium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 
 }
 
   html {
-    background-color: #2B0E50;
+    background-color: #111111;
     height: 100%;
   }
   
   #app {
-    font-family: 'OPTIAuvantGothic';
-    text-transform: uppercase;
-    color: #000000;
-    background-color: #2B0E50;
+    font-family: 'SwissNowTrial';
+    color: #ffffff;
+    background-color: #111111;
   }
   
   .app {
-  font-family: 'OPTIAuvantGothic';
-  color: #000000;
-  background-color: #2B0E50;
-    text-transform: uppercase;
+  font-family: 'SwissNowTrial';
+  color: #ffffff;
+  background-color: #111111;
   }
   
 </style>

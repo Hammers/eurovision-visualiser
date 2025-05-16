@@ -66,7 +66,7 @@
             submit() {
                 console.log(this.votes);
                 this.$emit('submit-votes',this.votes);
-                localStorage.vote2024 = true;
+                localStorage.vote2025 = true;
                 this.$router.push("/");
             },
             getNumberClass(index) {
@@ -114,28 +114,29 @@
     }
 
     .country-box {
-        text-transform: uppercase;
         vertical-align: middle;
         font-size: 3vh;
         height: 6.5vh;
     }
 
     .unselected {
-        background: #0043FF;
+        background: #481985;
     }
     
     .selected {
-        background: #0043FF;
+        background: #481985;
     }
     
     .number-box {
         height: 6.5vh;
         width: 15vh;
         font-size: 6vh;
+      font-family: "Source Serif 4", serif;
     }
 
     .other {
-        background: #F80083;
+        background: #FFFFFF;
+      color: #222222;
     }
 
     .first {

@@ -3,7 +3,7 @@
             <div class="row justify-content-center align-items-center w-100">
                 <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
-                        <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
+                        <div class="country-box m-1 w-100 d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.firstHalf" :key="country.name">
                             <img :src="'flags/' + country.flag" alt="" class="flag h-100 me-3" v-if="!showNumberBox(country)">
                             <div class="number-box me-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)" v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-12 col-lg-5 my-0 mx-1 p-0">
                     <transition-group tag="div" name="list">
-                        <div class="country-box m-1 w-100 text-light d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
+                        <div class="country-box m-1 w-100 d-flex align-items-center" :class="{'selected': isSelected(country), 'unselected': !isSelected(country)}" v-for="country in sortedTotals.secondHalf" :key="country.name">
                             <img :src="'flags/' + country.flag" alt="" class="flag h-100 me-3" v-if="!showNumberBox(country)">
                             <div class="number-box me-3 d-flex align-items-center justify-content-center text-center" :class="getNumberClass(country)"  v-if="showNumberBox(country)">
                                 <span class="align-middle">{{getValue(country)}}</span>
@@ -131,7 +131,6 @@
     }
     
     .country-box {
-        text-transform: uppercase;
         vertical-align: middle;
         font-size: 3.5vh;
         height: 7vh;
@@ -142,13 +141,16 @@
     }
     
     .selected {
-        background: #FC6E2E;
+        background: #0CD9D7;
+        color: #512293;
     }
 
     .number-box {
+      font-family: 'Cabin';
         height: 7vh;
         width: 10vh;
         font-size: 6vh;
+      color: #ffffff;
     }
     
     .other {
@@ -184,7 +186,7 @@
 
     .vote-total {
       padding-right: 20px;
-      color: #FFFFFF;
+      font-family: 'Cabin';
     }
     
     .progress {
@@ -192,6 +194,6 @@
     }
     
     .progress-bar {
-        background-color: #F80083;
+        background-color: #0CD9D7;
     }
 </style>

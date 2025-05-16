@@ -10,12 +10,12 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/reset', component: Home, beforeEnter: (to,from,next) => {
-            delete localStorage.vote2024;
+            delete localStorage.vote2025;
             next({path: "/"});
         }
     },
     { path: '/vote', component: Voting, beforeEnter: (to,from,next) => {
-            if (localStorage.vote2024) {
+            if (localStorage.vote2025) {
                 next({path: "/"});
             } else {
                  next();
